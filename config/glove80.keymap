@@ -19,37 +19,40 @@
 #define MAGIC 2
 
 #define _SNGQU NUHS // '
-// #define _DBLQU &mt LS(N2) // "
+// #define _DBLQU &mt LS(N1) // "
 #define _APOST EQUAL // ´
 #define _MULTI LS(NUHS) // *
-#define _2DOTS RBKT // ¨
+#define _1DOTS RBKT // ¨
 #define _SV_AU LBKT // Å
 #define _SV_AE SQT // Ä
 #define _SV_OE SEMI // Ö
 #define _ANG_L GRAVE // <
 #define _ANG_R LS(GRAVE) // >
-#define _SQR_L LA(N8) // [
-#define _SQR_R LA(N9) // ]
-#define _PAR_L LS(N8) // (
-#define _PAR_R LS(N9) // )
-#define _CRL_L LS(LA(N8)) // {
-#define _CRL_R LS(LA(N9)) // }
+#define _SQR_L LA(N7) // [
+#define _SQR_R LA(N8) // ]
+#define _PAR_L LS(N7) // (
+#define _PAR_R LS(N8) // )
+#define _CRL_L LS(LA(N7)) // {
+#define _CRL_R LS(LA(N8)) // }
 #define _PLUS  MINUS // +
 #define _DASH  SLASH // -
-#define _AT    LA(N2) // @
-#define _DOLLR LA(N4) // $
-#define _FSLSH LS(N7) // /
-#define _PIPE  LA(N7) // /
-#define _BSLSH LS(LA(N7)) // \
+#define _AT    LA(N1) // @
+#define _DOLLR LA(N3) // $
+#define _FSLSH LS(N6) // /
+#define _PIPE  LA(N6) // /
+#define _BSLSH LS(LA(N6)) // \
 #define _WRD_L LA(LEFT) // <<
 #define _WRD_R LA(RIGHT) // >>
 #define _TILDE LA(RBKT) // ~
-#define _EQUAL LS(N0) // =
+#define _EQUAL LS(N-1) // =
 #define _QUEST LS(MINUS) // ?
 #define _COLON LS(DOT) // :
 #define _PARAG NUBS // §
-#define _PERCN LS(N5) // %
-#define _AMPER LS(N6) // &
+#define _PERCN LS(N4) // %
+#define _AMPER LS(N5) // &
+#define _BRACK LS(N3) // #
+#define _LOCK SUPER(CTRL(Q)) // Cmd + Control + Q
+#define _FN_KEY 
 
 / {
     behaviors {
@@ -132,23 +135,23 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                         &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp _PLUS
-            &kp GRAVE      &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U   &kp I       &kp O       &kp P       &kp _SV_AU
-            &kp ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                      &kp H   &kp J   &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
-            &kp TAB        &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp DEL    &layer_td  &none  &kp RCTRL &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp _DASH   &none
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp LGUI   &kp LALT   &kp RALT   &lt LOWER ENTER &kp SPACE           &kp UP  &kp DOWN    &kp PG_UP   &kp PG_DN   &none
+            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                                 &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
+            &kp GRAVE      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                             &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp _PLUS
+            &kp _SNGQU     &kp Q    &kp W       &kp E       &kp R       &kp T                                                                              &kp Y   &kp U   &kp I       &kp O       &kp P       &kp _SV_AU
+            &kp ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                              &kp H   &kp J   &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
+            &kp TAB        &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp DEL    &layer_td  &none      &kp RCTRL       &kp RSHFT     &kp N   &kp M   &kp COMMA   &kp DOT     &kp _DASH   &none
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp LGUI   &kp LALT   &kp RALT   &lt LOWER ENTER &kp SPACE             &kp UP  &kp DOWN    &kp PG_UP   &kp PG_DN   &none
             >;
         };
 
         lower_layer {
             bindings = <
-            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none       &trans 
-            &trans            &none               &none           &none           &none           &trans                                                                                &trans      &trans      &trans        &trans        &trans      &trans 
-            &trans            &none               &none           &kp UP          &none           &trans                                                                                &trans      &trans      &kp _SQR_L    &kp _SQR_R    &trans      &trans 
-            &trans            &kp _AT             &kp _DOLLR      &kp _MULTI      &kp _TILDE      &kp _COLON                                                                            &trans      &kp _CRL_L  &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &trans 
-            &trans            &kp K_CMENU         &none           &trans          &kp _PERCN      &kp _AMPER      &trans      &trans      &to DEFAULT &trans      &trans      &trans    &kp _EQUAL  &kp _FSLSH  &kp _PIPE     &kp _BSLSH    &kp _QUEST  &trans
-            &trans            &kp CAPS            &kp INS         &trans          &trans                          &trans      &trans      &trans      &trans      &trans      &trans                &trans      &trans        &trans        &trans      &trans
+            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
+            &none             &none               &none           &none           &none           &none                                                                                 &none       &none       &none         &none         &none       &none 
+            &none             &none               &none           &kp UP          &none           &kp _TILDE                                                                            &none       &kp _ANG_L  &kp _SQR_L    &kp _SQR_R    &kp _ANG_R  &none 
+            &trans            &kp _AT             &kp _DOLLR      &kp _MULTI      &kp _AMPER      &kp _BRACK                                                                            &kp _EQUAL  &kp _CRL_L  &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &none 
+            &trans            &kp K_CMENU         &none           &none           &kp _PERCN      &none           &trans      &trans      &to DEFAULT &trans      &trans      &trans    &none       &kp _FSLSH  &kp _PIPE     &kp _BSLSH    &kp _QUEST  &none
+            &trans            &trans              &trans          &trans          &trans                          &trans      &trans      &trans      &trans      &trans      &trans                &none       &none         &none         &none       &none
             >;
         };
 
