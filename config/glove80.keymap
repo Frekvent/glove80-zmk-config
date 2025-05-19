@@ -157,12 +157,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |M\/()
 
             bindings = <
-            &kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                   &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp GRAVE         &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                           &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp _PLUS
-            &kp _SNGQU        &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                            &kp Y   &kp U   &kp I       &kp O       &kp P       &kp _SV_AU
-            &kp ESC           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                            &kp H   &kp J   &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
-            &kp TAB           &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT   &kp DEL     &layer_td      &none      &kp RCTRL        &kp RSHFT     &kp N   &kp M   &kp COMMA   &kp DOT     &kp _DASH   &none
-            &magic MAGIC 0    &none               &none           &kp LEFT        &kp RIGHT                       &kp BSPC    &kp LGUI    &kp LALT       &kp RALT   &lt LOWER ENTER  &kp SPACE             &kp UP  &kp DOWN    &kp PG_UP   &kp PG_DN   &none
+            &kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                        &kp F6         &kp F7      &kp F8      &kp F9      &kp F10
+            &kp GRAVE         &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                           &kp N6       &kp N7         &kp N8      &kp N9      &kp N0      &kp _PLUS
+            &kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                            &kp Y        &kp U          &kp I       &kp O       &kp P       &kp _SV_AU
+            &kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                            &kp H        &kp J          &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
+            &kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp DEL     &kp LCTRL   &to LOWER      &none      &kp RCTRL        &kp DEL       &kp N        &kp M          &kp COMMA   &kp DOT     &kp _DASH   &kp RSHFT
+            &magic MAGIC 0    &kp HOME            &kp END         &kp LEFT        &kp RIGHT                       &kp BSPC    &kp LGUI    &kp LALT       &kp RALT   &lt LOWER ENTER  &kp SPACE                  &kp UP         &kp DOWN    &kp PG_UP   &kp PG_DN   &none
             >;
         };
 
@@ -172,7 +172,7 @@
             &none             &none               &none           &none           &none           &none                                                                                             &none       &none          &none         &none         &none       &none 
             &none             &bcktk3             &bcktk          &kp UP          &kp _PERCN      &kp _TILDE                                                                                        &kp _SNGQU  &kp _ANG_L     &kp _SQR_L    &kp _SQR_R    &kp _ANG_R  &none 
             &trans            &kp _AT             &kp _DOLLR      &kp _MULTI      &kp _AMPER      &kp _BRACK                                                                                        &kp _EQUAL  &kp _CRL_L     &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &none 
-            &trans            &kp K_CMENU         &none           &none           &none           &none           &none       &none       &to DEFAULT    &none       &none           &none          &none       &kp _BSLSH     &kp _PIPE     &kp _FSLSH    &kp _QUEST  &none
+            &trans            &kp K_CMENU         &none           &none           &none           &none           &none       &none       &none          &none       &none           &none          &none       &kp _BSLSH     &kp _PIPE     &kp _FSLSH    &kp _QUEST  &none
             &trans            &trans              &trans          &trans          &trans                          &none       &none       &none          &none       &none           &none                      &none          &none         &none         &none       &none
             >;
         };
