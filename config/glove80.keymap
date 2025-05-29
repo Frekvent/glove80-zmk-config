@@ -112,12 +112,12 @@
 #define LIN_PIPE RA(GRAVE)
 
 // combos
-#define LIN_CUT LGUI(X)
-#define LIN_COPY LGUI(C)
-#define LIN_PASTE LGUI(V)
-#define LIN_UNDO LGUI(Z)
-#define LIN_REDO LS(LGUI(Z))
-#define LIN_SELECT_ALL LGUI(A)
+#define LIN_CUT LA(X)
+#define LIN_COPY LA(C)
+#define LIN_PASTE LA(V)
+#define LIN_UNDO LA(Z)
+#define LIN_REDO LS(LA(Z))
+#define LIN_SELECT_ALL LA(A)
 
 / {
 	behaviors {
