@@ -103,13 +103,13 @@
 //Other keys
 #define LIN_STAR LS(NUHS)
 #define LIN_APOS NUHS
-#define LIN_CARET LS(NUBS)
+#define LIN_CARET LS(LBKT)
 #define LIN_FTICK EQUAL
 #define LIN_MINUS QMARK
 #define LIN_LOW_DASH LS(QMARK)
-#define LIN_LTHAN GRAVE
-#define LIN_GTHAN LS(GRAVE)
-#define LIN_PIPE RA(GRAVE)
+#define LIN_LTHAN NUBS
+#define LIN_GTHAN LS(NUBS)
+#define LIN_PIPE RA(NUBS)
 
 // combos
 #define LIN_CUT LC(X)
