@@ -14,9 +14,11 @@
 #define HYPER LC(LS(LG(LALT)))
 
 // layers
-#define DEFAULT 0
-#define LOWER 1
+#define MAC_BASE 0
+#define MAC_LOWER 1
 #define MAGIC 2
+#define LINUX_BASE 3
+#define LINUX_LOWER 4
 
 #define _SNGQU NUHS // '
 
@@ -147,7 +149,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac_base_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -157,21 +159,21 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |M\/()
 
             bindings = <
-            &kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                        &kp F6         &kp F7      &kp F8      &kp F9      &kp F10
-            &kp F12           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                           &kp N6       &kp N7         &kp N8      &kp N9      &kp N0      &kp _PLUS
-            &kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                            &kp Y        &kp U          &kp I       &kp O       &kp P       &kp _SV_AU
-            &kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                            &kp H        &kp J          &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
-            &kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp DEL     &kp LCTRL   &to LOWER      &none      &kp RCTRL        &kp DEL       &kp N        &kp M          &kp COMMA   &kp DOT     &kp _DASH   &kp RSHFT
-            &magic MAGIC 0    &kp LS(LG(C))       &bcktk3         &kp LEFT        &kp RIGHT                       &kp BSPC    &kp LGUI    &kp LALT       &kp RALT   &lt LOWER ENTER  &kp SPACE                  &kp UP         &kp DOWN    &kp PG_UP   &kp PG_DN   &none
+            &kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                            &kp F6         &kp F7      &kp F8      &kp F9      &kp F10
+            &kp F12           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                               &kp N6       &kp N7         &kp N8      &kp N9      &kp N0      &kp _PLUS
+            &kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                &kp Y        &kp U          &kp I       &kp O       &kp P       &kp _SV_AU
+            &kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                &kp H        &kp J          &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
+            &kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp DEL     &kp LCTRL   &none          &none      &kp RCTRL            &kp RSHFT     &kp N        &kp M          &kp COMMA   &kp DOT     &kp _DASH   &kp RSHFT
+            &magic MAGIC 0    &kp LS(LG(C))       &bcktk3         &kp LEFT        &kp RIGHT                       &kp BSPC    &kp LGUI    &kp LALT       &kp RALT   &lt MAC_LOWER ENTER  &kp SPACE                  &kp UP         &kp DOWN    &kp PG_UP   &kp PG_DN   &none
             >;
         };
 
-        lower_layer {
+        mac_lower_layer {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                      &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
             &none             &none               &none           &none           &none           &none                                                                                             &none       &none          &none         &none         &none       &none 
             &none             &none               &bcktk          &kp UP          &kp _PERCN      &kp _TILDE                                                                                        &kp _SNGQU  &kp _ANG_L     &kp _SQR_L    &kp _SQR_R    &kp _ANG_R  &none 
-            &trans            &kp _AT             &kp _DOLLR      &kp _MULTI      &kp _AMPER      &kp _BRACK                                                                                        &kp _EQUAL  &kp _CRL_L     &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &none 
+            &trans            &kp _AT             &kp _MULTI      &kp _DOLLR      &kp _AMPER      &kp _BRACK                                                                                        &kp _EQUAL  &kp _CRL_L     &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &none 
             &trans            &kp K_CMENU         &none           &none           &none           &none           &none       &none       &none          &none       &none           &none          &none       &kp _BSLSH     &kp _PIPE     &kp _FSLSH    &kp _QUEST  &none
             &trans            &trans              &trans          &trans          &trans                          &none       &none       &none          &none       &none           &none                      &none          &none         &none         &none       &none
             >;
@@ -179,12 +181,34 @@
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                                         &none      &none      &none      &none      &bt BT_CLR_ALL
+            &bt BT_CLR        &to MAC_BASE        &to LINUX_BASE  &none           &none                                                                                                                         &none      &none      &none      &none      &bt BT_CLR_ALL
             &none             &none               &none           &none           &none           &none                                                                                             &none       &none      &none      &none      &none      &none
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                                   &none       &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                                   &none       &none      &none      &none      &none      &bootloader
             &sys_reset        &none               &none           &none           &none           &none           &bt_2       &bt_3       &none          &none       &none           &none          &none       &none      &none      &none      &none      &sys_reset
             &none             &none               &none           &none           &none                           &bt_0       &bt_1       &out OUT_USB   &none       &none           &none                      &none      &none      &none      &none      &none
+            >;
+        };
+I
+        linux_base_layer {
+            bindings = <
+            &kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                              &kp F6         &kp F7      &kp F8      &kp F9      &kp F10
+            &kp F12           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6       &kp N7         &kp N8      &kp N9      &kp N0      &kp _PLUS
+            &kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                  &kp Y        &kp U          &kp I       &kp O       &kp P       &kp _SV_AU
+            &kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                  &kp H        &kp J          &kp K       &kp L       &kp _SV_OE  &kp _SV_AE
+            &kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp DEL     &kp LGUI   &none          &none      &kp RCTRL              &kp RSHFT      &kp N        &kp M          &kp COMMA   &kp DOT     &kp _DASH   &kp RSHFT
+            &magic MAGIC 0    &kp HOME            &kp END         &kp LEFT        &kp RIGHT                       &kp BSPC    &kp LCTRL  &kp LALT       &kp RALT   &lt LINUX_LOWER ENTER  &kp SPACE                   &kp UP         &kp DOWN    &kp PG_UP   &kp PG_DN   &none
+            >;
+        };
+
+        linux_lower_layer {
+            bindings = <
+            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                      &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
+            &none             &none               &none           &none           &none           &none                                                                                             &none       &none          &none         &none         &none       &none 
+            &none             &none               &kp             &kp CARET       &kp PRCNT       &kp TILDE2                                                                                        &kp APOS    &kp LT         &kp LBKT      &kp RBKT      &kp GT      &none 
+            &trans            &kp AT              &kp STAR        &kp DOLLAR      &kp AMPS        &kp HASH                                                                                          &kp _EQUAL  &kp _CRL_L     &kp _PAR_L    &kp _PAR_R    &kp _CRL_R  &none 
+            &trans            &kp C_AC_UNDO       &kp C_AC_CUT    &kp C_AC_COPY   &kp C_AC_PASTE  &kp C_AC_REDO   &none       &none       &none          &none       &none           &none          &none       &kp _BSLSH     &kp _PIPE     &kp _FSLSH    &kp _QUEST  &none
+            &trans            &trans              &trans          &trans          &trans                          &none       &none       &none          &none       &none           &none                      &trans         &trans        &trans        &trans      &none
             >;
         };
     };
