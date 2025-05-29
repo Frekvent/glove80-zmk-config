@@ -23,101 +23,101 @@
 // MacOS X specific keycodes
 
 // Number row
-#define MAC_BANG LS(N1)// !
-#define MAC_QUOTE LS(N2)// "
-#define MAC_BRKT LS(N3)// #
-#define MAC_PERC LS(N4)// %
-#define MAC_DOLLAR LA(N4)// $
-#define MAC_AMPER LS(N5)// &
-#define MAC_SLASH LS(N7)// /
-#define MAC_LPAR LS(N8)// left parenthesis
-#define MAC_RPAR LS(N9)// right parenthesis
-#define MAC_EQUAL LS(N0)// =
-#define MAC_PLUS MINUS// +
-#define MAC_AT RA(N2)// @
-#define MAC_LBRKT LA(N8)// [
-#define MAC_RBRKT LA(N9)// ]
-#define MAC_LBRC LS(LA(N8))// {
-#define MAC_RBRC LS(LA(N9))// }
+#define MAC_BANG LS(N1)
+#define MAC_QUOTE LS(N2)
+#define MAC_BRKT LS(N3)
+#define MAC_PERC LS(N4)
+#define MAC_DOLLAR LA(N4)
+#define MAC_AMPER LS(N5)
+#define MAC_SLASH LS(N7)
+#define MAC_LPAR LS(N8)
+#define MAC_RPAR LS(N9)
+#define MAC_EQUAL LS(N0)
+#define MAC_PLUS MINUS
+#define MAC_AT RA(N2)
+#define MAC_LBRKT LA(N8)
+#define MAC_RBRKT LA(N9)
+#define MAC_LBRC LS(LA(N8))
+#define MAC_RBRC LS(LA(N9))
 
 // Other keys
-#define MAC_APOS NUHS// '
-#define MAC_STAR LS(NUHS)// *
-#define MAC_LTHAN GRAVE// <
-#define MAC_GTHAN LS(GRAVE)// >
-#define MAC_PIPE LA(N7)// |
-#define MAC_BSLASH LS(LA(N7))// \
-#define MAC_QMARK LS(PLUS)// ?
-#define MAC_MINUS SLASH// -
-#define MAC_TILDE LA(RBKT)// ~
-#define MAC_FTICK EQUAL// ´
-#define MAC_DOTS RBKT// ¨
-#define MAC_PARAG NUBS// §
-#define MAC_CARET LS(NUBS)// ^
+#define MAC_APOS NUHS
+#define MAC_STAR LS(NUHS)
+#define MAC_LTHAN GRAVE
+#define MAC_GTHAN LS(GRAVE)
+#define MAC_PIPE LA(N7)
+#define MAC_BSLASH LS(LA(N7))
+#define MAC_QMARK LS(PLUS)
+#define MAC_MINUS SLASH
+#define MAC_TILDE LA(RBKT)
+#define MAC_FTICK EQUAL
+#define MAC_DOTS RBKT
+#define MAC_PARAG NUBS
+#define MAC_CARET LS(NUBS)
 
 // MAC combos
-#define MAC_UNDO LGUI(Z)// Cmd + Z
-#define MAC_CUT LGUI(X)// Cmd + X
-#define MAC_COPY LGUI(C)// Cmd + C
-#define MAC_PASTE LGUI(V)// Cmd + V
-#define MAC_REDO LS(LGUI(Z))// Cmd + Shift + Z
-#define MAC_SELECT_ALL LGUI(A)// Cmd + A
-#define MAC_PG_UP LGUI(UP)// Cmd + Up
-#define MAC_PG_DN LGUI(DOWN)// Cmd + Down
-#define MAC_HOME LGUI(LEFT)// Cmd + Left
-#define MAC_END LGUI(RIGHT)// Cmd + Right
+#define MAC_UNDO LGUI(Z)
+#define MAC_CUT LGUI(X)
+#define MAC_COPY LGUI(C)
+#define MAC_PASTE LGUI(V)
+#define MAC_REDO LS(LGUI(Z))
+#define MAC_SELECT_ALL LGUI(A)
+#define MAC_PG_UP LGUI(UP)
+#define MAC_PG_DN LGUI(DOWN)
+#define MAC_HOME LGUI(LEFT)
+#define MAC_END LGUI(RIGHT)
 
 //Swedish specific keys
-#define SWE_AU LBKT// Å
-#define SWE_AE SQT// Ä
-#define SWE_OE SEMI// Ö
+#define SWE_AU LBKT
+#define SWE_AE SQT
+#define SWE_OE SEMI
 
 // Navigation
-#define MAC_WORD_L LA(LEFT)// <<
-#define MAC_WORD_R LA(RIGHT)// >>
+#define MAC_WORD_L LA(LEFT)
+#define MAC_WORD_R LA(RIGHT)
 
 
 
 // Linux specific keycodes
 
 //Number row
-#define LIN_BANG LS(N1)// !
-#define LIN_QUOTE LS(N2)// "
-#define LIN_AT RA(N2)// @
-#define LIN_BRKT LS(N3)// #
-#define LIN_DOLLAR RA(N4)// $
-#define LIN_PERC LS(N5)// %
-#define LIN_AMPER LS(N6)// &
-#define LIN_SLASH LS(N7)// /
-#define LIN_LBRC RA(N7)// {
-#define LIN_RBRC RA(N0)// }
-#define LIN_LPAR LS(N8)// (
-#define LIN_RPAR LS(N9)// )
-#define LIN_LBRKT RA(N8)// [
-#define LIN_RBRKT RA(N9)// ]
-#define LIN_EQUAL LS(N0)// =
-#define LIN_PLUS MINUS// +
-#define LIN_BSLASH RA(MINUS)// \
-#define LIN_QMARK LS(MINUS)// ?
+#define LIN_BANG LS(N1)
+#define LIN_QUOTE LS(N2)
+#define LIN_AT RA(N2)
+#define LIN_BRKT LS(N3)
+#define LIN_DOLLAR RA(N4)
+#define LIN_PERC LS(N5)
+#define LIN_AMPER LS(N6)
+#define LIN_SLASH LS(N7)
+#define LIN_LBRC RA(N7)
+#define LIN_RBRC RA(N0)
+#define LIN_LPAR LS(N8)
+#define LIN_RPAR LS(N9)
+#define LIN_LBRKT RA(N8)
+#define LIN_RBRKT RA(N9)
+#define LIN_EQUAL LS(N0)
+#define LIN_PLUS MINUS
+#define LIN_BSLASH RA(MINUS)
+#define LIN_QMARK LS(MINUS)
 
 //Other keys
-#define LIN_STAR LS(NUHS)// *
-#define LIN_APOS NUHS// '
-#define LIN_CARET LS(NUBS)// ^
-#define LIN_FTICK EQUAL// ´
-#define LIN_MINUS QMARK// -
-#define LIN_LOW_DASH LS(QMARK)// _
-#define LIN_LTHAN GRAVE// <
-#define LIN_GTHAN LS(GRAVE)// >
-#define LIN_PIPE RA(GRAVE)// |
+#define LIN_STAR LS(NUHS)
+#define LIN_APOS NUHS
+#define LIN_CARET LS(NUBS)
+#define LIN_FTICK EQUAL
+#define LIN_MINUS QMARK
+#define LIN_LOW_DASH LS(QMARK)
+#define LIN_LTHAN GRAVE
+#define LIN_GTHAN LS(GRAVE)
+#define LIN_PIPE RA(GRAVE)
 
 // combos
-#define LIN_CUT LC(X)// Ctrl + X
-#define LIN_COPY LC(C)// Ctrl + C
-#define LIN_PASTE LC(V)// Ctrl + V
-#define LIN_UNDO LC(Z)// Ctrl + Z
-#define LIN_REDO LS(LC(Z))// Ctrl + Shift + Z
-#define LIN_SELECT_ALL LC(A)// Ctrl + A
+#define LIN_CUT LC(X)
+#define LIN_COPY LC(C)
+#define LIN_PASTE LC(V)
+#define LIN_UNDO LC(Z)
+#define LIN_REDO LS(LC(Z))
+#define LIN_SELECT_ALL LC(A)
 
 / {
 	behaviors {
