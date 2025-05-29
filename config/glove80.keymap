@@ -25,16 +25,16 @@
 // Number row
 #define MAC_BANG LS(N1)
 #define MAC_QUOTE LS(N2)
+#define MAC_AT RA(N2)
 #define MAC_BRKT LS(N3)
-#define MAC_PERC LS(N4)
 #define MAC_DOLLAR LA(N4)
-#define MAC_AMPER LS(N5)
+#define MAC_PERC LS(N5)
+#define MAC_AMPER LS(N6)
 #define MAC_SLASH LS(N7)
 #define MAC_LPAR LS(N8)
 #define MAC_RPAR LS(N9)
 #define MAC_EQUAL LS(N0)
 #define MAC_PLUS MINUS
-#define MAC_AT RA(N2)
 #define MAC_LBRKT LA(N8)
 #define MAC_RBRKT LA(N9)
 #define MAC_LBRC LS(LA(N8))
@@ -47,13 +47,12 @@
 #define MAC_GTHAN LS(GRAVE)
 #define MAC_PIPE LA(N7)
 #define MAC_BSLASH LS(LA(N7))
-#define MAC_QMARK LS(PLUS)
+#define MAC_QMARK LS(MINUS)
 #define MAC_MINUS SLASH
 #define MAC_TILDE LA(RBKT)
 #define MAC_FTICK EQUAL
 #define MAC_DOTS RBKT
-#define MAC_PARAG NUBS
-#define MAC_CARET LS(NUBS)
+#define MAC_CARET LS(RBKT)
 
 // MAC combos
 #define MAC_UNDO LG(Z)
