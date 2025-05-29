@@ -215,6 +215,16 @@
 	
 	keymap {
 		compatible = "zmk,keymap";
+		mac_base_layer {
+			bindings = <
+			&kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                                  &kp F6         &kp F7          &kp F8          &kp F9         &kp F10
+			&kp F11           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                    &kp N6        &kp N7         &kp N8          &kp N9          &kp N0         &kp F12
+			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                     &kp Y         &kp U          &kp I           &kp O           &kp P          &kp SWE_AU
+			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                     &kp H         &kp J          &kp K           &kp L           &kp SWE_OE     &kp SWE_AE
+			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT     &kp LCTRL     &kp LALT       &kp RALT     &kp RCTRL           &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
+			&magic MAGIC 0    &none               &none           &kp LEFT        &kp RIGHT                       &kp BSPC      &kp LGUI      &kp DEL        &kp DEL      &lt MAC_LOWER ENTER &kp SPACE                   &kp UP         &kp DOWN        &none           &none          &none
+			>;
+		};
 		linux_base_layer {
 			bindings = <
 			&kp F1            &kp F2              &kp F3          &kp F4          &kp F5                                                                                                                                  &kp F6         &kp F7          &kp F8          &kp F9          &kp F10
@@ -268,5 +278,6 @@
 			&none             &none               &none           &none           &none                           &bt_0         &bt_1         &out OUT_USB   &none        &none                 &none                     &none          &none           &none           &none           &none
 			>;
 		};
+		
 	};
 };
