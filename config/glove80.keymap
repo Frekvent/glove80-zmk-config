@@ -103,7 +103,7 @@
 //Other keys
 #define LIN_STAR LS(NUHS)
 #define LIN_APOS NUHS
-#define LIN_CARET LS(LBKT)
+#define LIN_CARET LS(RBKT)
 #define LIN_FTICK EQUAL
 #define LIN_MINUS QMARK
 #define LIN_LOW_DASH LS(QMARK)
