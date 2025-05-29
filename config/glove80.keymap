@@ -53,7 +53,7 @@
 #define _AMPER LS(N5) // &
 #define _BRACK LS(N3) // #
 
-{
+/ {
     macros {
         bcktk: backtick {
             label = "BACKTICK";
