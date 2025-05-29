@@ -110,6 +110,7 @@
 #define LIN_LTHAN NUBS
 #define LIN_GTHAN LS(NUBS)
 #define LIN_PIPE RA(NUBS)
+#define LIN_TILDE RA(RBKT)
 
 // combos
 #define LIN_CUT LC(X)
@@ -263,7 +264,7 @@
 			bindings = <
 			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &none
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
-			&none             &kp LIN_PERC        &bcktk          &kp LIN_FTICK   &kp LIN_APOS    &tilde                                                                                                    &kp LIN_CARET &kp LIN_LTHAN  &kp LIN_LBRKT   &kp LIN_RBRKT   &kp LIN_GTHAN   &none
+			&none             &kp LIN_PERC        &bcktk          &kp LIN_FTICK   &kp LIN_APOS    &kp LIN_TILDE                                                                                             &kp LIN_CARET &kp LIN_LTHAN  &kp LIN_LBRKT   &kp LIN_RBRKT   &kp LIN_GTHAN   &none
 			&trans            &kp LIN_AT          &kp LIN_STAR    &kp LIN_DOLLAR  &kp LIN_AMPER   &kp LIN_BRKT                                                                                              &kp LIN_EQUAL &kp LIN_LBRC   &kp LIN_LPAR    &kp LIN_RPAR    &kp LIN_RBRC    &none
 			&trans            &kp LIN_UNDO        &kp LIN_CUT     &kp LIN_COPY    &kp LIN_PASTE   &kp LIN_REDO    &none         &none         &none          &none        &none                 &none       &kp LIN_PLUS  &kp LIN_BSLASH &kp LIN_PIPE    &kp LIN_SLASH   &kp LIN_QMARK   &none
 			&trans            &none               &none           &kp HOME        &kp END                         &none         &none         &none          &none        &none                 &none                     &kp PG_UP      &kp PG_DN       &none           &none           &none
