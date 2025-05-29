@@ -242,7 +242,7 @@
             &none             &kp MAC_PERC        &bcktk          &kp MAC_FTICK   &kp MAC_APOS    &kp MAC_TILDE                                                                                     &kp MAC_CARET &kp MAC_LTHAN  &kp MAC_LBRKT   &kp MAC_RBRKT &kp MAC_GTHAN &none 
             &trans            &kp MAC_AT          &kp MAC_STAR    &kp MAC_DOLLAR  &kp MAC_AMPER   &kp MAC_BRKT                                                                                      &kp MAC_EQUAL &kp MAC_LBRC   &kp MAC_LPAR    &kp MAC_RPAR  &kp MAC_RBRC  &none 
             &trans            &kp MAC_UNDO        &kp MAC_CUT     &kp MAC_COPY    &kp MAC_PASTE   &kp MAC_REDO         &none       &none       &none          &none       &none           &none     &kp MAC_PLUS  &kp MAC_BSLASH &kp MAC_PIPE    &kp MAC_SLASH &kp MAC_QMARK &none
-            &trans            &trans              &trans          &kp MAC_HOME    &kp MAC_END                          &none       &none       &none          &none       &none           &none                   &kp MAC_PG_UP  &kp MAC_PG_DOWN &none         &none         &none
+            &trans            &trans              &trans          &kp MAC_HOME    &kp MAC_END                          &none       &none       &none          &none       &none           &none                   &kp MAC_PG_UP  &kp MAC_PG_DN &none         &none         &none
             >;
         };
 
