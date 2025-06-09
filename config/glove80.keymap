@@ -125,8 +125,9 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "MAGIC_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <300>;
+			quick-tap-ms = <200>;
 			bindings = <&mo>, <&rgb_ug_status_macro>;
 		};
 	};
