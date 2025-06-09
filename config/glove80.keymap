@@ -125,9 +125,8 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "MAGIC_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <300>;
-			quick-tap-ms = <200>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
 			bindings = <&mo>, <&rgb_ug_status_macro>;
 		};
 	};
@@ -229,7 +228,7 @@
 		
 		mac_lower_layer {
 			bindings = <
-			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &none
+			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &to LINUX_BASE
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
 			&none             &kp MAC_PERC        &bcktk          &kp MAC_FTICK   &kp MAC_APOS    &kp MAC_TILDE                                                                                             &kp MAC_CARET &kp MAC_LTHAN  &kp MAC_LBRKT   &kp MAC_RBRKT   &kp MAC_GTHAN   &none
 			&trans            &kp MAC_AT          &kp MAC_STAR    &kp MAC_DOLLAR  &kp MAC_AMPER   &kp MAC_BRKT                                                                                              &kp MAC_EQUAL &kp MAC_LBRC   &kp MAC_LPAR    &kp MAC_RPAR    &kp MAC_RBRC    &none
@@ -240,7 +239,7 @@
 		
 		magic_layer {
 			bindings = <
-			&bt BT_CLR        &to MAC_BASE        &to LINUX_BASE  &none           &none                                                                                                                                   &none          &none           &none           &none           &bt BT_CLR_ALL
+			&bt BT_CLR        &none               &none           &none           &none                                                                                                                                   &none          &none           &none           &none           &bt BT_CLR_ALL
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
 			&none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                                           &none         &none          &none           &none           &none           &none
 			&bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                                           &none         &none          &none           &none           &none           &bootloader
@@ -262,7 +261,7 @@
 		
 		linux_lower_layer {
 			bindings = <
-			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &none
+			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &to MAC_BASE
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
 			&none             &kp LIN_PERC        &bcktk          &kp LIN_FTICK   &kp LIN_APOS    &kp LIN_TILDE                                                                                             &kp LIN_CARET &kp LIN_LTHAN  &kp LIN_LBRKT   &kp LIN_RBRKT   &kp LIN_GTHAN   &none
 			&trans            &kp LIN_AT          &kp LIN_STAR    &kp LIN_DOLLAR  &kp LIN_AMPER   &kp LIN_BRKT                                                                                              &kp LIN_EQUAL &kp LIN_LBRC   &kp LIN_LPAR    &kp LIN_RPAR    &kp LIN_RBRC    &none
