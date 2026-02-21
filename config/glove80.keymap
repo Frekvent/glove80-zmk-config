@@ -242,8 +242,8 @@
 			&kp F11           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                        &kp N6        &kp N7         &kp N8          &kp N9          &kp N0         &kp F12
 			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                         &kp Y         &kp U          &kp I           &kp O           &kp P          &kp SWE_AU
 			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                         &kp H         &kp J          &kp K           &kp L           &kp SWE_OE     &kp SWE_AE
-			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT     &none             &none         &kp DEL      &kp TAB              &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
-			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &kp LCTRL     &kp LALT          &kp LGUI      &kp BSPC     &lt MAC_LOWER ENTER  &lt NUMBER_NAV SPACE        &kp DOWN       &kp UP          &none           &kp ESC        &none
+			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &none            &none         &kp DEL      &kp TAB              &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
+			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &lt LCTRL BSPC &kp LALT         &kp LGUI      &kp BSPC     &lt MAC_LOWER ENTER  &lt NUMBER_NAV SPACE        &kp DOWN       &kp UP          &none           &kp ESC        &none
 			>;
 		};
 		
@@ -264,8 +264,8 @@
 			&kp F11           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                    &kp N6        &kp N7         &kp N8          &kp N9          &kp N0          &kp F12
 			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                     &kp Y         &kp U          &kp I           &kp O           &kp P           &kp SWE_AU
 			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                     &kp H         &kp J          &kp K           &kp L           &kp SWE_OE      &kp SWE_AE
-			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT     &none                &none       &kp DEL       &kp TAB          &kp RSHFT   &kp N         &kp M          &kp COMMA       &kp DOT         &kp LIN_MINUS   &kp RSHFT
-			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &kp LCTRL     &kp LALT             &kp LGUI    &kp BSPC &lt LINUX_LOWER ENTER &lt NUMBER_NAV SPACE      &kp DOWN       &kp UP          &none           &kp ESC         &none
+			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &none               &none       &kp DEL       &kp TAB          &kp RSHFT   &kp N         &kp M          &kp COMMA       &kp DOT         &kp LIN_MINUS   &kp RSHFT
+			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &lt LCTRL BSPC &kp LALT            &kp LGUI    &kp BSPC &lt LINUX_LOWER ENTER &lt NUMBER_NAV SPACE      &kp DOWN       &kp UP          &none           &kp ESC         &none
 			>;
 		};
 		
