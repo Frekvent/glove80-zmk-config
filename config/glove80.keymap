@@ -243,7 +243,7 @@
 			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                         &kp Y         &kp U          &kp I           &kp O           &kp P          &kp SWE_AU
 			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                         &kp H         &kp J          &kp K           &kp L           &kp SWE_OE     &kp SWE_AE
 			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &none            &none         &kp DEL      &kp TAB              &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
-			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &lt LCTRL BSPC &kp LGUI         &kp LALT      &kp BSPC     &lt MAC_LOWER ENTER  &lt NUMBER_NAV SPACE        &kp DOWN       &kp UP          &none           &kp ESC        &none
+			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &mt LCTRL BSPC &kp LGUI         &kp LALT      &kp BSPC     &lt MAC_LOWER ENTER  &lt NUMBER_NAV SPACE        &kp DOWN       &kp UP          &none           &kp ESC        &none
 			>;
 		};
 		
