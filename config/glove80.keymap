@@ -164,6 +164,26 @@
 			<&macro_tap &kp SPACE>;
 		};
 		
+    maccaret: mac_caret_macro {
+			label = "MAC_CARET_MACRO";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <10>;
+			bindings =
+			<&macro_tap &kp MAC_CARET>,
+			<&macro_tap &kp SPACE>;
+		};
+		
+    lincaret: lin_caret_macro {
+			label = "LIN_CARET_MACRO";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <10>;
+			bindings =
+			<&macro_tap &kp LIN_CARET>,
+			<&macro_tap &kp SPACE>;
+		};    
+
     tilde: tilde_macro {
 			label = "TILDE";
 			compatible = "zmk,behavior-macro";
@@ -242,7 +262,7 @@
 			&kp F11           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                        &kp N6        &kp N7         &kp N8          &kp N9          &kp N0         &kp F12
 			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                         &kp Y         &kp U          &kp I           &kp O           &kp P          &kp SWE_AU
 			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                         &kp H         &kp J          &kp K           &kp L           &kp SWE_OE     &kp SWE_AE
-			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &kp LCTRL     &kp MAC_CARET &kp MAC_DOLLAR &kp TAB               &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
+			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &kp LCTRL     &maccaret     &kp MAC_DOLLAR &kp TAB               &kp RSHFT     &kp N         &kp M          &kp COMMA       &kp DOT         &kp MAC_MINUS  &kp RSHFT
 			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &kp BSPC       &kp LGUI      &kp LALT      &kp DEL        &lt MAC_LOWER ENTER   &lt NUMBER_NAV SPACE        &kp DOWN       &kp UP          &none           &kp ESC        &none
 			>;
 		};
@@ -251,7 +271,7 @@
 			bindings = <
 			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &to LINUX_BASE
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
-			&none             &kp MAC_PERC        &bcktk          &kp MAC_FTICK   &kp MAC_APOS    &mactilde                                                                                                 &kp MAC_CARET &kp MAC_LTHAN  &kp MAC_LBRKT   &kp MAC_RBRKT   &kp MAC_GTHAN   &none
+			&none             &kp MAC_PERC        &bcktk          &kp MAC_FTICK   &kp MAC_APOS    &mactilde                                                                                                 &maccaret     &kp MAC_LTHAN  &kp MAC_LBRKT   &kp MAC_RBRKT   &kp MAC_GTHAN   &none
 			&trans            &kp MAC_AT          &kp MAC_STAR    &kp MAC_DOLLAR  &kp MAC_AMPER   &kp MAC_BRKT                                                                                              &kp MAC_EQUAL &kp MAC_LBRC   &kp MAC_LPAR    &kp MAC_RPAR    &kp MAC_RBRC    &none
 			&trans            &kp MAC_UNDO        &kp MAC_CUT     &kp MAC_COPY    &kp MAC_PASTE   &kp MAC_REDO    &none         &none         &none          &none        &none                &none        &kp MAC_PLUS  &kp MAC_BSLASH &kp MAC_PIPE    &kp MAC_SLASH   &kp MAC_QMARK   &none
 			&trans            &none               &none           &kp MAC_HOME    &kp MAC_END                     &trans        &none         &none          &trans       &none                &none                      &kp MAC_PG_UP  &kp MAC_PG_DN   &none           &none           &none
@@ -264,7 +284,7 @@
 			&kp F11           &kp N1              &kp N2          &kp N3          &kp N4          &kp N5                                                                                                    &kp N6        &kp N7         &kp N8          &kp N9          &kp N0          &kp F12
 			&kp ESC           &kp Q               &kp W           &kp E           &kp R           &kp T                                                                                                     &kp Y         &kp U          &kp I           &kp O           &kp P           &kp SWE_AU
 			&kp TAB           &kp A               &kp S           &kp D           &kp F           &kp G                                                                                                     &kp H         &kp J          &kp K           &kp L           &kp SWE_OE      &kp SWE_AE
-			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &kp LCTRL   &kp LIN_CARET &kp LIN_DOLLAR &kp TAB               &kp RSHFT   &kp N         &kp M          &kp COMMA       &kp DOT         &kp LIN_MINUS   &kp RSHFT
+			&kp LSHFT         &kp Z               &kp X           &kp C           &kp V           &kp B           &kp LSHFT      &kp LCTRL   &lincaret     &kp LIN_DOLLAR &kp TAB               &kp RSHFT   &kp N         &kp M          &kp COMMA       &kp DOT         &kp LIN_MINUS   &kp RSHFT
 			&magic MAGIC 0    &kp ESC             &none           &kp LEFT        &kp RIGHT                       &kp BSPC       &kp LALT    &kp LGUI      &kp DEL        &lt LINUX_LOWER ENTER &lt NUMBER_NAV SPACE      &kp DOWN       &kp UP          &none           &kp ESC         &none
 			>;
 		};
@@ -273,7 +293,7 @@
 			bindings = <
 			&kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                                                &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &none           &to MAC_BASE
 			&none             &none               &none           &none           &none           &none                                                                                                     &none         &none          &none           &none           &none           &none
-			&none             &kp LIN_PERC        &bcktk          &kp LIN_FTICK   &kp LIN_APOS    &lintilde                                                                                                 &kp LIN_CARET &kp LIN_LTHAN  &kp LIN_LBRKT   &kp LIN_RBRKT   &kp LIN_GTHAN   &none
+			&none             &kp LIN_PERC        &bcktk          &kp LIN_FTICK   &kp LIN_APOS    &lintilde                                                                                                 &lincaret     &kp LIN_LTHAN  &kp LIN_LBRKT   &kp LIN_RBRKT   &kp LIN_GTHAN   &none
 			&trans            &kp LIN_AT          &kp LIN_STAR    &kp LIN_DOLLAR  &kp LIN_AMPER   &kp LIN_BRKT                                                                                              &kp LIN_EQUAL &kp LIN_LBRC   &kp LIN_LPAR    &kp LIN_RPAR    &kp LIN_RBRC    &none
 			&trans            &kp LIN_UNDO        &kp LIN_CUT     &kp LIN_COPY    &kp LIN_PASTE   &kp LIN_REDO    &none         &none         &none          &none        &none                 &none       &kp LIN_PLUS  &kp LIN_BSLASH &kp LIN_PIPE    &kp LIN_SLASH   &kp LIN_QMARK   &none
 			&trans            &none               &none           &kp HOME        &kp END                         &trans        &none         &none          &trans       &none                 &none                     &kp PG_DN      &kp PG_UP       &none           &none           &none
